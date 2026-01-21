@@ -7,6 +7,36 @@
     <title>Shuja Ud Din - Senior Mobile Application Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+        // Firebase Analytics Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDBuZhdoossUIVslgtmyyoGyeYTToOreRo",
+            authDomain: "mobile-developer-sse.firebaseapp.com",
+            projectId: "mobile-developer-sse",
+            storageBucket: "mobile-developer-sse.firebasestorage.app",
+            messagingSenderId: "788741647876",
+            appId: "1:788741647876:web:b8a64550fd11ce1b518f51",
+            measurementId: "G-B87LQ87LY5"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Log page view
+        logEvent(analytics, 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href
+        });
+
+        // Make analytics available globally for tracking clicks
+        window.firebaseAnalytics = { analytics, logEvent };
+    </script>
 </head>
 
 <body>
@@ -50,10 +80,6 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">$1B+</div>
-                            <div class="stat-label">Transactions Processed</div>
-                        </div>
-                        <div class="stat-item">
                             <div class="stat-number">135K+</div>
                             <div class="stat-label">Active Users</div>
                         </div>
@@ -72,6 +98,8 @@
                         <a href="https://github.com/ishujaudin" target="_blank" aria-label="GitHub"><i
                                 class="fab fa-github"></i></a>
                         <a href="mailto:shuja_uet@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/923390709080" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
