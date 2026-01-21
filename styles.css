@@ -241,7 +241,53 @@ body::before {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+/* Availability Badge */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
     margin-bottom: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #10b981;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+/* Platforms Text */
+.hero-platforms {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--aurora-3);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .hero-description {
