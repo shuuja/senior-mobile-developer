@@ -1,6 +1,6 @@
 # Shuja Ud Din - Portfolio Website
 
-A modern, responsive portfolio website showcasing my experience as a Senior iOS Engineer.
+A modern, responsive portfolio website showcasing my experience as a Senior Mobile Developer.
 
 ## 🚀 Deployment to GitHub Pages
 
