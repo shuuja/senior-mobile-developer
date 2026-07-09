@@ -1,872 +1,977 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuja Ud Din - Senior Mobile Application Developer</title>
+    <title>Shuja Ud Din | Senior Software Engineer &amp; Solution Architect</title>
 
-    <!-- SEO Meta Tags -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { }
+        })();
+    </script>
+
+    <!-- SEO -->
     <meta name="description"
-        content="Senior Mobile Developer with 10+ years experience building iOS, Android, Flutter & React Native apps. Expert in fintech, banking, and consumer platforms. Available for hire.">
-    <meta name="keywords"
-        content="iOS Developer, Android Developer, Flutter, Flutter Flow, React Native, Mobile Developer, Swift, Kotlin, Pakistan, Remote">
+        content="Shuja Ud Din is a Senior Software Engineer and Solution Architect with 10+ years of experience. Mobile apps in Swift, Kotlin, Flutter and React Native, plus full-stack work with Firebase, Supabase, Node.js and Python. Available for freelance and consulting.">
     <meta name="author" content="Shuja Ud Din">
+    <link rel="canonical" href="https://shuuja.github.io/senior-mobile-developer/">
+    <meta name="theme-color" content="#0a0c10" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)">
 
-    <!-- Open Graph / LinkedIn -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shuuja.github.io/senior-mobile-developer/">
-    <meta property="og:title" content="Shuja Ud Din - Senior Mobile Developer | iOS, Android & React Native">
+    <meta property="og:title" content="Shuja Ud Din | Senior Software Engineer &amp; Solution Architect">
     <meta property="og:description"
-        content="10+ years building scalable mobile apps for fintech, banking & consumer platforms using iOS, Android, Flutter & React Native. 15+ major projects delivered. Available for opportunities.">
+        content="10+ years building mobile apps used by millions, from digital banks to live streaming. Now working across the whole stack: mobile, web, backend and AI-assisted engineering.">
     <meta property="og:image" content="https://shuuja.github.io/senior-mobile-developer/profile-new.jpg">
 
-    <!-- Twitter Card -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shuja Ud Din - Senior Mobile Developer">
+    <meta name="twitter:title" content="Shuja Ud Din | Senior Software Engineer &amp; Solution Architect">
     <meta name="twitter:description"
-        content="10+ years building iOS, Android, Flutter & React Native apps. Available for hire.">
+        content="10+ years building mobile apps used by millions. Full-stack engineering across mobile, web and backend.">
+    <meta name="twitter:image" content="https://shuuja.github.io/senior-mobile-developer/profile-new.jpg">
+
+    <!-- Icons -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Preloads -->
+    <link rel="preload" href="assets/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/profile.webp" as="image" fetchpriority="high">
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Firebase SDK -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-
-        // Firebase Analytics Configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDBuZhdoossUIVslgtmyyoGyeYTToOreRo",
-            authDomain: "mobile-developer-sse.firebaseapp.com",
-            projectId: "mobile-developer-sse",
-            storageBucket: "mobile-developer-sse.firebasestorage.app",
-            messagingSenderId: "788741647876",
-            appId: "1:788741647876:web:b8a64550fd11ce1b518f51",
-            measurementId: "G-B87LQ87LY5"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
-        // Log page view
-        logEvent(analytics, 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href
-        });
-
-        // Make analytics available globally for tracking clicks
-        window.firebaseAnalytics = { analytics, logEvent };
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shuja Ud Din",
+        "jobTitle": "Senior Software Engineer & Solution Architect",
+        "url": "https://shuuja.github.io/senior-mobile-developer/",
+        "image": "https://shuuja.github.io/senior-mobile-developer/profile-new.jpg",
+        "email": "mailto:shuja_uet@hotmail.com",
+        "telephone": "+923435235173",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Engineering & Technology, Lahore" },
+        "sameAs": [
+            "https://linkedin.com/in/shuja-ud-din/",
+            "https://github.com/ishujaudin"
+        ],
+        "knowsAbout": ["iOS", "Android", "Swift", "SwiftUI", "Kotlin", "Flutter", "React Native", "Kotlin Multiplatform", "Firebase", "Supabase", "Node.js", "Python", "Solution Architecture", "AI-assisted software development"]
+    }
     </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Shuja Ud Din</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- SVG icon sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </symbol>
+        <symbol id="i-whatsapp" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </symbol>
+        <symbol id="i-apple" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+        </symbol>
+        <symbol id="i-gplay" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/>
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3 7 9 6 9-6"/>
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+            <circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="10" r="3"/>
+        </symbol>
+        <symbol id="i-download" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/>
+        </symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24">
+            <circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="12" r="10"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="12" r="4"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </symbol>
+        <symbol id="i-smartphone" viewBox="0 0 24 24">
+            <rect fill="none" stroke="currentColor" stroke-width="2" x="5" y="2" width="14" height="20" rx="2"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 18h.01"/>
+        </symbol>
+        <symbol id="i-server" viewBox="0 0 24 24">
+            <rect fill="none" stroke="currentColor" stroke-width="2" x="2" y="3" width="20" height="7" rx="2"/>
+            <rect fill="none" stroke="currentColor" stroke-width="2" x="2" y="14" width="20" height="7" rx="2"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6.5h.01M6 17.5h.01"/>
+        </symbol>
+        <symbol id="i-layout" viewBox="0 0 24 24">
+            <rect fill="none" stroke="currentColor" stroke-width="2" x="3" y="3" width="18" height="18" rx="2"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" d="M3 9h18M9 21V9"/>
+        </symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24">
+            <circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="12" r="10"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/>
+        </symbol>
+        <symbol id="i-sparkles" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v3m0 12v3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M3 12h3m12 0h3M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1"/>
+            <circle fill="currentColor" stroke="none" cx="12" cy="12" r="2.5"/>
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/>
+        </symbol>
+        <symbol id="i-code" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
+        </symbol>
+        <symbol id="i-grad" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/>
+        </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <span class="brand-name">Shuja Ud Din</span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">
+                    <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+                    <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+                </button>
+                <a href="Shuja_Ud_Din_Resume.pdf" class="btn btn-small btn-ghost header-resume" download>Resume</a>
+                <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                    <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+                    <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+                </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="profile-new.jpg" alt="Shuja Ud Din" id="profile-img">
-                </div>
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero" id="top">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container hero-inner">
                 <div class="hero-text">
-                    <div class="availability-badge">
-                        <span class="status-dot"></span>
-                        <span>Available for Work</span>
+                    <p class="badge">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Available for new projects
+                    </p>
+                    <h1 class="hero-title">Shuja Ud Din</h1>
+                    <p class="hero-role"><span class="grad-text">Senior Software Engineer &amp; Solution Architect</span></p>
+                    <p class="hero-lead">For over a decade I've built mobile apps that people rely on every day, from
+                        digital banks moving billions to live sports streaming. Today I work across the whole stack:
+                        native and cross-platform mobile, web frontends, and backends on anything from Firebase and
+                        Supabase to custom APIs.</p>
+                    <ul class="hero-stats">
+                        <li class="stat">
+                            <span class="stat-value">10+</span>
+                            <span class="stat-label">Years shipping software</span>
+                        </li>
+                        <li class="stat">
+                            <span class="stat-value">20+</span>
+                            <span class="stat-label">Apps in production</span>
+                        </li>
+                        <li class="stat">
+                            <span class="stat-value">$1B+</span>
+                            <span class="stat-label">Processed by apps I've built</span>
+                        </li>
+                    </ul>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View my work</a>
+                        <a href="Shuja_Ud_Din_Resume.pdf" class="btn btn-ghost" download>
+                            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+                            Download resume
+                        </a>
                     </div>
-                    <h1 class="hero-title">Hi, I'm <span class="highlight">Shuja Ud Din</span></h1>
-                    <h2 class="hero-subtitle">Senior Mobile Developer</h2>
-                    <p class="hero-platforms">iOS • Android • React Native • Flutter</p>
-                    <p class="hero-description">Building high-quality, scalable mobile applications for 10+ years across
-                        iOS, Android, Flutter, and React Native. Expertise spanning fintech, banking, streaming, and
-                        consumer
-                        platforms. Proven track record delivering secure, user-focused products serving millions with
-                        100% client satisfaction. </p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-                        <a href="Shuja_Ud_Din_Resume.pdf" class="btn btn-secondary" download><i
-                                class="fas fa-download"></i> Download Resume</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/shuja-ud-din/" target="_blank" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/ishujaudin" target="_blank" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="mailto:shuja_uet@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://wa.me/923390709080" target="_blank" aria-label="WhatsApp"><i
-                                class="fab fa-whatsapp"></i></a>
+                    <ul class="social-row">
+                        <li><a href="https://linkedin.com/in/shuja-ud-din/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+                        <li><a href="https://github.com/ishujaudin" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+                        <li><a href="mailto:shuja_uet@hotmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+                        <li><a href="https://wa.me/923390709080" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+                    </ul>
+                </div>
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <img src="assets/profile.webp" alt="Portrait of Shuja Ud Din" width="600" height="600"
+                            fetchpriority="high" decoding="async">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Senior Mobile Application Developer with 10+ years of experience building high-quality, scalable
-                        applications across iOS, Android, Flutter, and React Native. Deep expertise in native
-                        development with
-                        Swift/SwiftUI and Kotlin, plus cross-platform solutions using React Native and Flutter. Strong
-                        background in
-                        fintech, digital banking, streaming, messaging, gaming, social media, and consumer platforms.
-                        Proficient in modern mobile architectures including MVVM, Clean Architecture, and
-                        modularization.</p>
-                    <p>Proven ability to lead features end-to-end, improve performance and stability, and deliver
-                        secure, user-focused products used by millions. Experienced in both startup and enterprise
-                        environments, with a strong focus on clean code, maintainability, and product impact. Currently
-                        leading mobile development for a fintech super-app that has processed over $1B in transactions
-                        with 15+ successful projects delivered. </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="info-label">Location:</span>
-                            <span class="info-value">Lahore, Pakistan</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Email:</span>
-                            <span class="info-value">shuja_uet@hotmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Phone:</span>
-                            <span class="info-value">+923435235173</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Status:</span>
-                            <span class="info-value">Open to Remote & International Roles</span>
-                        </div>
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <p class="eyebrow">About</p>
+                <h2 class="section-title">A mobile specialist who grew into the whole stack</h2>
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p>I started out building iOS games in 2013 and grew into leading mobile development for banks,
+                            fintechs, and startups across the Gulf, Europe, the US, and Australia. Along the way I've
+                            shipped native apps in Swift and Kotlin, cross-platform products in Flutter, React Native,
+                            and Kotlin Multiplatform, and SDKs used by some of the region's biggest banks.</p>
+                        <p>These days I work as a senior engineer and solution architect. I design systems end to end:
+                            the mobile clients, the APIs behind them, the data layer, and the release pipeline. I care
+                            about clean architecture, honest estimates, and shipping work I'm proud to put my name
+                            on.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <p class="skills-description">With over 10 years of mobile development experience across iOS, Android,
-                React Native, and Flutter, I've mastered these technologies and methodologies to create exceptional
-                cross-platform
-                mobile experiences.</p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="skill-category-title">Languages & Frameworks</h3>
-                    <ul class="skill-list">
-                        <li>Swift & SwiftUI</li>
-                        <li>Kotlin & Jetpack Compose</li>
-                        <li>Flutter & Dart</li>
-                        <li>React Native & TypeScript</li>
-                        <li>UIKit & Android Views</li>
-                        <li>Combine, Coroutines & async/await</li>
-                        <li>AVFoundation & ExoPlayer</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3 class="skill-category-title">Architecture & Patterns</h3>
-                    <ul class="skill-list">
-                        <li>MVVM & Clean Architecture</li>
-                        <li>SOLID Principles</li>
-                        <li>Modularization</li>
-                        <li>Dependency Injection</li>
-                        <li>SDK Development</li>
-                        <li>Protocol-Oriented Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="skill-category-title">Backend & Database</h3>
-                    <ul class="skill-list">
-                        <li>Firebase & Firestore</li>
-                        <li>Supabase</li>
-                        <li>CoreData & Room</li>
-                        <li>SQLite & Realm</li>
-                        <li>RESTful APIs</li>
-                        <li>GraphQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="skill-category-title">Testing & Tools</h3>
-                    <ul class="skill-list">
-                        <li>XCTest & JUnit/Espresso</li>
-                        <li>Snapshot/UI Testing</li>
-                        <li>Xcode & Android Studio</li>
-                        <li>Git, SPM & Gradle</li>
-                        <li>Fastlane & GitHub Actions</li>
-                        <li>TestFlight & Play Console</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="skill-category-title">APIs & Integrations</h3>
-                    <ul class="skill-list">
-                        <li>REST APIs & GraphQL</li>
-                        <li>Apple Pay & Google Pay</li>
-                        <li>Push Notifications (APNs/FCM)</li>
-                        <li>Firebase & Analytics</li>
-                        <li>Payment Gateways</li>
-                        <li>In-App Purchases</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="skill-category-title">Performance & Security</h3>
-                    <ul class="skill-list">
-                        <li>Debugging & Profiling</li>
-                        <li>Memory Management</li>
-                        <li>Performance Optimization</li>
-                        <li>Mobile Security Best Practices</li>
-                        <li>SSL Pinning & Keychain/Keystore</li>
-                        <li>Threading (GCD/Coroutines)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="skill-category-title">Cross-Platform</h3>
-                    <ul class="skill-list">
-                        <li>React Native</li>
-                        <li>Flutter & Flutter Flow</li>
-                        <li>TypeScript & JavaScript</li>
-                        <li>Redux & Context API</li>
-                        <li>Native Modules & Bridges</li>
-                        <li>Code Sharing Strategies</li>
-                        <li>Platform-Specific UI</li>
+                    <ul class="about-facts">
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                            <span>Lahore, Pakistan (UTC+5)</span>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+                            <span>Remote, worldwide</span>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                            <a href="mailto:shuja_uet@hotmail.com">shuja_uet@hotmail.com</a>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+                            <span>Open to contract and full-time roles</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">06/2022 – Present</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Senior Mobile Developer (iOS/Android)</h3>
-                        <h4 class="company-name">Beyon Money - Batelco Group</h4>
-                        <p class="job-location">Bahrain, Remote</p>
-                        <ul class="job-description">
-                            <li>Lead iOS development for a fintech super-app with 15+ major projects delivered,
-                                processing $1B+ in transactions</li>
-                            <li>Built and maintained core modules including payments, transfers, wallets, cards,
-                                rewards, and digital onboarding</li>
-                            <li>Migrated major features to SwiftUI, improving development speed and UI consistency</li>
-                            <li>Implemented clean architecture and modularization to support long-term scalability</li>
-                            <li>Integrated Apple Pay, analytics, crash reporting, and third-party SDKs</li>
-                            <li>Improved app stability and scalability, significantly reducing production
-                                issues</li>
-                            <li>Delivered frequent releases via TestFlight and App Store with high reliability</li>
+        <!-- Services / Freelance consulting -->
+        <section class="section section-alt" id="services">
+            <div class="container">
+                <p class="eyebrow">Freelance &amp; consulting</p>
+                <h2 class="section-title">How I can help</h2>
+                <p class="section-lead">Alongside my full-time roles I've run an independent consulting practice since
+                    2015, delivering more than a dozen products for clients in Australia, Ireland, the US, and the
+                    Gulf. Every project below in my portfolio shipped to real users.</p>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
+                        <h3>Mobile engineering</h3>
+                        <p>Native iOS and Android, Flutter, React Native, and Kotlin Multiplatform. From the first
+                            commit to store release, including the App Store and Play Store review process.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg></div>
+                        <h3>Backend &amp; cloud</h3>
+                        <p>APIs and infrastructure in Node.js, Python, or whatever fits the job. Firebase, Supabase,
+                            PostgreSQL, AWS, and the glue between them.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></div>
+                        <h3>Web frontends</h3>
+                        <p>Fast, accessible web apps in React and Next.js that share a design language with your
+                            mobile product, so everything feels like one product.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg></div>
+                        <h3>Architecture &amp; leadership</h3>
+                        <p>System design, code audits, SDK design, CI/CD pipelines, and mentoring. I've defined public
+                            SDK APIs used by major GCC banks.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI section -->
+        <section class="section" id="ai">
+            <div class="container">
+                <p class="eyebrow">AI-assisted engineering</p>
+                <h2 class="section-title">I build with AI agents, every day</h2>
+                <div class="ai-grid">
+                    <div class="ai-copy">
+                        <p class="section-lead">Autonomous coding agents changed how I work, and I've rebuilt my whole
+                            workflow around them. Not as a shortcut, but as a force multiplier with real engineering
+                            discipline behind it.</p>
+                        <ul class="check-list">
+                            <li><strong>Agent-driven development.</strong> I run tools like Claude Code and Cursor as
+                                part of daily work, from planning and scaffolding through to the pull request.</li>
+                            <li><strong>Spec first.</strong> I write clear specs and constraints so agents produce code
+                                that fits the architecture, then I review every line before it ships.</li>
+                            <li><strong>Custom tooling.</strong> MCP integrations, automated code review, test
+                                generation, and CI pipelines that keep quality high at speed.</li>
+                            <li><strong>The payoff.</strong> I ship in days what used to take weeks, without giving up
+                                code quality or maintainability.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">01/2019 – 05/2022</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Senior Mobile Engineer - Fintech & SDK Teams</h3>
-                        <h4 class="company-name">Virtual Force Inc, Aion Digital Bahrain, Emaar UAE</h4>
-                        <p class="job-location">Remote / MENA / Pakistan</p>
-                        <ul class="job-description">
-                            <li>Designed and delivered a reusable Digital Onboarding SDK adopted by major GCC banks</li>
-                            <li>Defined stable public SDK APIs with backward-compatibility guarantees, distributed via
-                                Swift Package Manager</li>
-                            <li>Contributed to core banking apps for KFH Bahrain, Boubyan Bank, and ASB</li>
-                            <li>Played a key role in launching the UAE's first fully digital corporate banking
-                                application</li>
-                            <li>Embedded with client teams (including Emaar UAE) to deliver production features and
-                                UI/UX revamps</li>
-                            <li>Implemented CI/CD automation using Fastlane and GitHub Actions</li>
-                            <li>Reviewed pull requests and enforced clean architecture and coding standards</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">09/2017 – 12/2018</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Mobile Developer - Media Streaming</h3>
-                        <h4 class="company-name">Tv2u International</h4>
-                        <p class="job-location">Lahore</p>
-                        <ul class="job-description">
-                            <li>Developed live and on-demand streaming applications using AVFoundation/AVPlayer</li>
-                            <li>Implemented IPTV, EPG, VOD navigation, and subscription-based monetization with in-app
-                                purchases</li>
-                            <li>Focused on playback stability, performance optimization, and smooth UX for large
-                                audiences</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">06/2015 – 07/2017</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Mobile & macOS Developer</h3>
-                        <h4 class="company-name">Devbatch PVT LTD</h4>
-                        <p class="job-location">Lahore, Pakistan</p>
-                        <ul class="job-description">
-                            <li>Built production e-commerce iOS app (Kohinoor Fabric Library) with catalog browsing and
-                                offline-friendly experiences</li>
-                            <li>Developed features for social media and ride-hailing applications with focus on UX and
-                                performance</li>
-                            <li>Led full UI/UX revamp of Pryvate Messenger, improving usability and engagement</li>
-                            <li>Developed and maintained macOS application for Pryvate with shared business logic</li>
-                            <li>Participated in Objective-C to Swift migration, improving code quality and
-                                maintainability</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">12/2013 – 12/2014</div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Junior Game Developer</h3>
-                        <h4 class="company-name">Game Dynamics</h4>
-                        <p class="job-location">Lahore</p>
-                        <ul class="job-description">
-                            <li>Built 2D physics-based iOS games with Cocos2D & Box2D</li>
-                            <li>Gained foundation in performance optimisation and UI design</li>
-                        </ul>
+                    <div class="terminal" role="img" aria-label="Terminal showing an AI coding agent completing a feature">
+                        <div class="terminal-bar">
+                            <span class="t-dot" aria-hidden="true"></span>
+                            <span class="t-dot" aria-hidden="true"></span>
+                            <span class="t-dot" aria-hidden="true"></span>
+                            <span class="terminal-title">zsh</span>
+                        </div>
+                        <pre class="terminal-body"><code><span class="t-prompt">$</span> claude "add biometric login to the payments module"
+<span class="t-ok">✔</span> Explored codebase, planned 4 tasks
+<span class="t-ok">✔</span> FaceID + fallback PIN implemented
+<span class="t-ok">✔</span> 12 files changed, 38 tests passing
+<span class="t-prompt">$</span> git push origin feature/biometric-login
+<span class="t-dim">Review, refine, ship. Same day.</span></code></pre>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <p class="projects-description">A collection of mobile applications I've developed across iOS and Android,
-                showcasing my expertise in creating beautiful and functional cross-platform user experiences.</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="reserval_portfolio_new.png" alt="Reserval App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Reserval</h3>
-                        <p class="project-description">A comprehensive global travel booking platform enabling users to seamlessly discover and book from over 10 million hotels and 450 airlines. Integrated advanced filters, real-time Google Maps directions, and 3D-secure multi-currency payment gateways for a unified travel planning experience.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">iOS & Android</span>
-                            <span class="tech-tag">Google Maps API</span>
-                            <span class="tech-tag">Secure Payments</span>
-                            <span class="tech-tag">Flight APIs</span>
-                            <span class="tech-tag">Swift / Kotlin</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/pk/app/reserval-cruise-hotel-more/id1544042953" target="_blank" rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.reserval" target="_blank" rel="noopener noreferrer" class="project-link play-store"><i class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <p class="eyebrow">Skills</p>
+                <h2 class="section-title">Tools I reach for</h2>
+                <div class="card-grid skills-grid">
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
+                        <h3>Mobile</h3>
+                        <ul class="tag-list">
+                            <li>Swift &amp; SwiftUI</li>
+                            <li>Kotlin &amp; Jetpack Compose</li>
+                            <li>Flutter &amp; Dart</li>
+                            <li>React Native &amp; Expo</li>
+                            <li>Kotlin Multiplatform</li>
+                            <li>UIKit &amp; AVFoundation</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg></div>
+                        <h3>Backend &amp; cloud</h3>
+                        <ul class="tag-list">
+                            <li>Node.js &amp; TypeScript</li>
+                            <li>Python &amp; FastAPI</li>
+                            <li>Firebase &amp; Supabase</li>
+                            <li>PostgreSQL &amp; MongoDB</li>
+                            <li>REST &amp; GraphQL</li>
+                            <li>AWS &amp; Docker</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></div>
+                        <h3>Web</h3>
+                        <ul class="tag-list">
+                            <li>React &amp; Next.js</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>Redux &amp; Context</li>
+                            <li>Accessibility &amp; SEO</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg></div>
+                        <h3>Architecture</h3>
+                        <ul class="tag-list">
+                            <li>MVVM &amp; Clean Architecture</li>
+                            <li>Modularization</li>
+                            <li>SDK design &amp; distribution</li>
+                            <li>Dependency injection</li>
+                            <li>Offline-first design</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></div>
+                        <h3>AI tooling</h3>
+                        <ul class="tag-list">
+                            <li>Claude Code &amp; Cursor</li>
+                            <li>Agent workflows &amp; MCP</li>
+                            <li>Spec &amp; prompt writing</li>
+                            <li>AI code review</li>
+                            <li>Test generation</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+                        <h3>Payments, security &amp; delivery</h3>
+                        <ul class="tag-list">
+                            <li>Apple Pay &amp; Google Pay</li>
+                            <li>SSL pinning, Keychain &amp; Keystore</li>
+                            <li>Fastlane &amp; GitHub Actions</li>
+                            <li>TestFlight &amp; Play Console</li>
+                            <li>Push notifications (APNs/FCM)</li>
+                        </ul>
+                    </article>
                 </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="jeeny_portfolio_new.png" alt="Jeeny App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Jeeny</h3>
-                        <p class="project-description">A highly affordable and robust ride-hailing application serving Saudi Arabia and Jordan. Focused on exceptional reliable service and rider safety, integrating seamless real-time location mapping, dynamic pricing, and comprehensive transport tracking systems.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">iOS & Android</span>
-                            <span class="tech-tag">Maps SDK</span>
-                            <span class="tech-tag">Real-time Tracking</span>
-                            <span class="tech-tag">Payment Integration</span>
-                            <span class="tech-tag">Swift / Kotlin</span>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section" id="experience">
+            <div class="container">
+                <p class="eyebrow">Experience</p>
+                <h2 class="section-title">Where I've worked</h2>
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2015 - Present</span>
+                            <span class="timeline-place">Freelance, remote</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/jeeny-book-affordable-rides/id1178701124" target="_blank" rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=me.com.easytaxi" target="_blank" rel="noopener noreferrer" class="project-link play-store"><i class="fab fa-google-play"></i> Google Play</a>
+                        <div class="timeline-body">
+                            <h3>Independent Software Consultant</h3>
+                            <p class="timeline-company">Own consulting practice</p>
+                            <ul>
+                                <li>Delivered 12+ client products end to end across travel, health, real estate,
+                                    collectibles, and social, including Reserval, TriageX, Trading Card TV, Worlds, and
+                                    Airlister.</li>
+                                <li>Own the full lifecycle: scoping, architecture, development, store release, and
+                                    ongoing support.</li>
+                                <li>Built full-stack systems with React, Next.js, FastAPI, Node.js, Firebase, Supabase,
+                                    and AWS.</li>
+                            </ul>
                         </div>
-                    </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2022 - Present</span>
+                            <span class="timeline-place">Bahrain, remote</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Senior Mobile Developer</h3>
+                            <p class="timeline-company">Beyon Money, Batelco Group</p>
+                            <ul>
+                                <li>Lead iOS development for a fintech super app that has processed over $1B in
+                                    transactions, with 15+ major projects delivered.</li>
+                                <li>Built and maintain core modules: payments, transfers, wallets, cards, rewards, and
+                                    digital onboarding.</li>
+                                <li>Moved major features to SwiftUI and introduced modular clean architecture for
+                                    long-term scalability.</li>
+                                <li>Integrated Apple Pay, analytics, and crash reporting, and cut production issues
+                                    significantly.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2019 - 2022</span>
+                            <span class="timeline-place">Remote, MENA</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Senior Mobile Engineer, Fintech &amp; SDK teams</h3>
+                            <p class="timeline-company">Virtual Force, Aion Digital, Emaar</p>
+                            <ul>
+                                <li>Designed a reusable digital onboarding SDK adopted by major GCC banks, with stable
+                                    public APIs shipped through Swift Package Manager.</li>
+                                <li>Contributed to core banking apps for KFH Bahrain, Boubyan Bank, and ASB.</li>
+                                <li>Helped launch the UAE's first fully digital corporate banking app.</li>
+                                <li>Set up CI/CD with Fastlane and GitHub Actions, and kept standards high through code
+                                    review.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2017 - 2018</span>
+                            <span class="timeline-place">Lahore</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Mobile Developer, Media Streaming</h3>
+                            <p class="timeline-company">TV2U International</p>
+                            <ul>
+                                <li>Built live and on-demand streaming apps with AVFoundation, including IPTV, EPG, and
+                                    subscription payments.</li>
+                                <li>Focused on playback stability and smooth performance for large audiences.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2015 - 2017</span>
+                            <span class="timeline-place">Lahore</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Mobile &amp; macOS Developer</h3>
+                            <p class="timeline-company">Devbatch</p>
+                            <ul>
+                                <li>Shipped e-commerce, social, and ride-hailing apps, and led the full UI revamp of
+                                    Pryvate Messenger.</li>
+                                <li>Maintained the Pryvate macOS app and helped migrate the codebase from Objective-C
+                                    to Swift.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2013 - 2014</span>
+                            <span class="timeline-place">Lahore</span>
+                        </div>
+                        <div class="timeline-body">
+                            <h3>Junior Game Developer</h3>
+                            <p class="timeline-company">Game Dynamics</p>
+                            <ul>
+                                <li>Built 2D physics-based iOS games with Cocos2D and Box2D. This is where I learned to
+                                    care about performance.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <p class="eyebrow">Selected work</p>
+                <h2 class="section-title">Apps I've shipped</h2>
+                <p class="section-lead">A mix of full-time and freelance work. Every one of these made it to real
+                    users.</p>
+                <div class="filter-row" role="group" aria-label="Filter projects">
+                    <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" type="button" data-filter="native" aria-pressed="false">Native mobile</button>
+                    <button class="filter-btn" type="button" data-filter="cross" aria-pressed="false">Cross-platform</button>
+                    <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-stack</button>
                 </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="triagex_portfolio.png" alt="TriageX App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">TriageX</h3>
-                        <p class="project-description">A CE-class medical triage platform that empowers patients to self-assess symptoms through guided, dynamic clinical questionnaires. Architected an evidence-based multi-layered algorithm engine bridging web, native mobile experiences, and healthcare kiosks.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">React Native/Expo</span>
-                            <span class="tech-tag">Next.js 16</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">AWS & Docker</span>
+                <div class="projects-grid">
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/beyonmoney_portfolio_new.webp" alt="Beyon Money app screens" width="880" height="880" loading="lazy" decoding="async">
                         </div>
-                        <div class="project-links">
-                            <a href="http://13.60.77.177/sv" target="_blank" rel="noopener noreferrer" class="project-link web-link"><i class="fas fa-globe"></i> Live Web</a>
+                        <div class="project-body">
+                            <h3>Beyon Money</h3>
+                            <p>Bahrain's leading fintech super app: wallets, cards, investments, cross-border transfers,
+                                and Apple Pay, with over $1B processed.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>SwiftUI</li><li>Apple Pay</li><li>Firebase</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/app/id1584344662" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.commencis.bfs&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+                    <article class="project-card" data-cat="cross fullstack">
+                        <div class="project-media">
+                            <img src="assets/triagex_portfolio.webp" alt="TriageX medical triage platform screens" width="880" height="472" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>TriageX</h3>
+                            <p>A CE-class medical triage platform where patients check symptoms through guided clinical
+                                questionnaires, on web, mobile, and kiosks.</p>
+                            <ul class="chip-row">
+                                <li>React Native</li><li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li><li>AWS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="http://13.60.77.177/sv" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Live demo</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="cross fullstack">
+                        <div class="project-media">
+                            <img src="assets/trading_card_tv_portfolio.webp" alt="Trading Card TV app screens" width="880" height="480" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Trading Card TV</h3>
+                            <p>A live-stream marketplace for sports and Pokémon card collectors, with real-time auctions
+                                and interactive video breaks.</p>
+                            <ul class="chip-row">
+                                <li>Flutter</li><li>LiveKit</li><li>WebSockets</li><li>Node.js</li><li>MongoDB</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/trading-card-tv/id6751962298" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.tradingcardtv.app&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="cross">
+                        <div class="project-media">
+                            <img src="assets/worlds_portfolio_new.webp" alt="Worlds memory journal app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Worlds: Memory Journals</h3>
+                            <p>A shared journaling app where friends and family build worlds of dated memories together,
+                                from a single Kotlin codebase.</p>
+                            <ul class="chip-row">
+                                <li>Kotlin Multiplatform</li><li>Compose</li><li>Firebase</li><li>RevenueCat</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/app/id6757203351" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=co.worldsapp.app" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="cross fullstack">
+                        <div class="project-media">
+                            <img src="assets/airlister_portfolio_new.webp" alt="Airlister real estate platform on desktop and mobile" width="880" height="492" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Airlister</h3>
+                            <p>A real estate platform where owners manage listings across realestate.com.au and Domain
+                                from one dashboard, with flat-fee billing.</p>
+                            <ul class="chip-row">
+                                <li>React</li><li>React Native</li><li>Supabase</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/pk/app/airlister/id6759848274" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/reserval_portfolio_new.webp" alt="Reserval travel booking app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Reserval</h3>
+                            <p>A travel booking platform covering more than 10 million hotels and 450 airlines, with
+                                smart filters, live maps, and multi-currency payments.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Kotlin</li><li>Google Maps</li><li>Payments</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/pk/app/reserval-cruise-hotel-more/id1544042953" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.reserval" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/jeeny_portfolio_new.webp" alt="Jeeny ride-hailing app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Jeeny</h3>
+                            <p>A ride-hailing app serving Saudi Arabia and Jordan, with live tracking, dynamic pricing,
+                                and a strong focus on rider safety.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Kotlin</li><li>Maps SDK</li><li>Real-time</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/jeeny-book-affordable-rides/id1178701124" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=me.com.easytaxi" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/hiiker_portfolio_new.webp" alt="HiiKER hiking maps app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>HiiKER</h3>
+                            <p>A hiking app with offline topographic maps, 3D terrain, route planning, and GPX support
+                                for multi-day trips.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>MapKit</li><li>CoreData</li><li>Offline maps</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/hiiker-the-hiking-maps-app/id1470810597" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.waymarkedtrails.hiiker&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/pryvate_portfolio_new.webp" alt="Pryvate Messenger app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Pryvate Messenger</h3>
+                            <p>A secure messenger with end-to-end encrypted chat, voice, and video, plus remote wipe and
+                                other privacy tools.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Objective-C</li><li>Encryption</li><li>VoIP</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/pryvate-messenger/id914948581" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=net.pryvate&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/dubaimall_portfolio_new.webp" alt="Dubai Mall app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Dubai Mall</h3>
+                            <p>The official app for the world's largest shopping destination: store directories,
+                                promotions, events, and indoor navigation.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>MapKit</li><li>Push notifications</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/dubai-mall/id430795858" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/boubyan_portfolio_new.webp" alt="Boubyan Bank app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Boubyan Bank</h3>
+                            <p>Banking app for Kuwait's leading Islamic bank, covering onboarding, accounts, transfers,
+                                and payments under strict security standards.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Banking SDK</li><li>Security</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/kw/app/the-boubyan-app/id443799046" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/kfh_portfolio_new.webp" alt="KFH Bahrain banking app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>KFH Bahrain</h3>
+                            <p>Islamic banking app for Kuwait Finance House with a reusable onboarding SDK and
+                                Sharia-compliant financial tools.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Banking SDK</li><li>Security</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/bh/app/kfh-bahrain/id771724261" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/npfl_portfolio_new.webp" alt="NPFL Live sports streaming app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>NPFL Live</h3>
+                            <p>A sports streaming app for the Nigerian Professional Football League, serving live
+                                matches to thousands of concurrent viewers.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>AVFoundation</li><li>Streaming</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/npfl-live/id6464413890" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/votari_portfolio_new.webp" alt="Votari digital voting app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Votari</h3>
+                            <p>A blockchain-based voting platform focused on transparent, tamper-proof elections.</p>
+                            <ul class="chip-row">
+                                <li>SwiftUI</li><li>Blockchain</li><li>Web3</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/om/app/votari/id6748386729" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.votari.app&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/block_portfolio_new.webp" alt="Block digital wellbeing app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Block App</h3>
+                            <p>A digital wellbeing app built on Apple's Screen Time API that helps people cut screen
+                                time with schedules and usage insights.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Screen Time API</li><li>CoreData</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/app/id6752846663" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/going_solo_portfolio.webp" alt="Going Solo travel community app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Going Solo</h3>
+                            <p>A travel community that matches solo travelers and gets them talking, with location-based
+                                discovery and group planning.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>Firebase</li><li>MapKit</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/going-solo-travel-friends/id1671515758" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.goingsolo.android&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/officetree_portfolio_new.webp" alt="Officetree Phone VoIP app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Officetree Phone</h3>
+                            <p>A VoIP business phone system in your pocket, with multi-account calling, texting, and
+                                call routing.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>VoIP</li><li>Plivo</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/us/app/officetree-phone/id6444354321" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.officetree.phone&hl=en" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-gplay"/></svg>Google Play</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card" data-cat="native">
+                        <div class="project-media">
+                            <img src="assets/kohinoor_portfolio_new.webp" alt="Kohinoor Fabric Library e-commerce app screens" width="880" height="880" loading="lazy" decoding="async">
+                        </div>
+                        <div class="project-body">
+                            <h3>Kohinoor Fabric Library</h3>
+                            <p>An e-commerce app for browsing and ordering fabrics, with search, cart, payments, and
+                                order tracking.</p>
+                            <ul class="chip-row">
+                                <li>Swift</li><li>E-commerce</li><li>Payments</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/pk/app/kohinoor-fabric-library/id1069332525" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="trading_card_tv_portfolio.png" alt="Trading Card Tv App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Trading Card Tv</h3>
-                        <p class="project-description">A live-streaming marketplace platform for sports and Pokémon card collectors. Engineered a cross-platform app using Flutter and LiveKit to deliver low-latency real-time auctions, interactive video 'breaks', and secure portfolio tracking.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">LiveKit Streams</span>
-                            <span class="tech-tag">WebSockets</span>
-                            <span class="tech-tag">Node.js & AWS</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/trading-card-tv/id6751962298" target="_blank" rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.tradingcardtv.app&hl=en" target="_blank" rel="noopener noreferrer" class="project-link play-store"><i class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="worlds_portfolio_new.png" alt="Worlds App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Worlds: Memory Journals</h3>
-                        <p class="project-description">A highly collaborative cross-platform journaling app allowing users to build shared 'worlds' for dated memories. Architected with a single Kotlin codebase using Compose Multiplatform to deliver an intuitive calendar view, real-time sync, robust image handling, and subscription paywalls.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">KMP</span>
-                            <span class="tech-tag">Compose Multiplatform</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">RevenueCat</span>
-                            <span class="tech-tag">Ktor & Koin</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/app/id6757203351" target="_blank" rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=co.worldsapp.app" target="_blank" rel="noopener noreferrer" class="project-link play-store"><i class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="airlister_portfolio_new.png" alt="Airlister App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Airlister</h3>
-                        <p class="project-description">A full-stack real estate platform empowering owners to manage cross-platform listings from a unified dashboard. Engineered direct integration with realestate.com.au and Domain APIs, set up secure message routing, and integrated a flat-fee billing system.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Supabase</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">Full-Stack</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/pk/app/airlister/id6759848274" target="_blank" rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="beyonmoney_portfolio_new.png" alt="Beyon Money App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Beyon Money</h3>
-                        <p class="project-description">Leading fintech super app with 15+ major projects
-                            in
-                            transactions processed. Architected secure wallet management, physical/virtual card systems,
-                            investment portfolios, cross-border transfers, and Apple Pay integration. Led SwiftUI
-                            migration
-                            and clean architecture implementation while achieving high client satisfaction.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">SwiftUI</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Apple Pay</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">Financial Analytics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/app/id1584344662" target="_blank" rel="noopener noreferrer"
-                                class="project-link app-store"><i class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.commencis.bfs&hl=en"
-                                target="_blank" rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="hiiker_portfolio_new.png" alt="HiiKER App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">HiiKER</h3>
-                        <p class="project-description">Advanced hiking and navigation platform with offline topographic
-                            maps
-                            and 3D terrain visualization. Built route planning, GPX import/export, multi-day trip
-                            support,
-                            and real-time environmental data (weather, elevation, terrain) to empower outdoor
-                            adventurers
-                            worldwide.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">MapKit</span>
-                            <span class="tech-tag">CoreLocation</span>
-                            <span class="tech-tag">CoreData</span>
-                            <span class="tech-tag">3D Maps</span>
-                            <span class="tech-tag">Offline Maps</span>
-                            <span class="tech-tag">GPX</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/hiiker-the-hiking-maps-app/id1470810597"
-                                target="_blank" rel="noopener noreferrer" class="project-link app-store"><i
-                                    class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.waymarkedtrails.hiiker&hl=en"
-                                target="_blank" rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="going_solo_portfolio.png" alt="Going Solo App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Going Solo</h3>
-                        <p class="project-description">Connect solo travelers worldwide through intelligent matching and
-                            real-time chat. Built location-based discovery, group planning, and community features that
-                            brought together thousands of travelers seeking authentic connections.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">MapKit</span>
-                            <span class="tech-tag">CoreLocation</span>
-                            <span class="tech-tag">WebSocket</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/going-solo-travel-friends/id1671515758"
-                                target="_blank" rel="noopener noreferrer" class="project-link app-store"><i
-                                    class="fab fa-apple"></i> App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.goingsolo.android&hl=en"
-                                target="_blank" rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="pryvate_portfolio_new.png" alt="Pryvate App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Pryvate Messenger</h3>
-                        <p class="project-description">Military-grade secure communication platform with end-to-end
-                            encrypted messaging, voice/video calls, and burner phone capabilities. Implemented advanced
-                            security features including remote data wipe and SSL pinning to protect user privacy.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">Objective-C</span>
-                            <span class="tech-tag">Encryption</span>
-                            <span class="tech-tag">VoIP</span>
-                            <span class="tech-tag">Apple Pay</span>
-                            <span class="tech-tag">In-App Purchase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/pryvate-messenger/id914948581" target="_blank"
-                                rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i>
-                                App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=net.pryvate&hl=en" target="_blank"
-                                rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="votari_portfolio_new.png" alt="Votari App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Votari</h3>
-                        <p class="project-description">Revolutionary blockchain-based digital voting platform ensuring
-                            transparent, tamper-proof elections. Leveraged Web3 technology and SwiftUI to create a
-                            secure,
-                            verifiable voting experience with cryptographic integrity.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">SwiftUI</span>
-                            <span class="tech-tag">Blockchain</span>
-                            <span class="tech-tag">Web3</span>
-                            <span class="tech-tag">REST APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/om/app/votari/id6748386729" target="_blank"
-                                rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i>
-                                App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.votari.app&hl=en" target="_blank"
-                                rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="block_portfolio_new.png" alt="Block App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Block App</h3>
-                        <p class="project-description">Digital wellbeing solution leveraging Apple's Screen Time API to
-                            help
-                            users reclaim focus and build healthier phone habits. Created intuitive blocking schedules,
-                            usage insights, and app management features.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Screen Time API</span>
-                            <span class="tech-tag">CoreData</span>
-                        </div>
-                        <a href="https://apps.apple.com/app/id6752846663" target="_blank" rel="noopener noreferrer"
-                            class="project-link"><i class="fab fa-apple"></i> App Store</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="dubaimall_portfolio_new.png" alt="Dubai Mall App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Dubai Mall App</h3>
-                        <p class="project-description">Premium retail experience app for the world's largest shopping
-                            destination. Engineered interactive store directories, real-time promotions, event
-                            discovery,
-                            and indoor navigation to enhance millions of shoppers' experiences.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">MapKit</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">Push Notifications</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/dubai-mall/id430795858" target="_blank"
-                            rel="noopener noreferrer" class="project-link"><i class="fab fa-apple"></i> App Store</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="boubyan_portfolio_new.png" alt="Boubyan Bank App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Boubyan Bank</h3>
-                        <p class="project-description">Enterprise-grade banking application serving Kuwait's leading
-                            Islamic
-                            bank. Developed secure onboarding SDK, account management, transfers, and payment features
-                            adhering to strict financial regulations and security standards.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Banking SDK</span>
-                            <span class="tech-tag">Security</span>
-                            <span class="tech-tag">REST APIs</span>
-                        </div>
-                        <a href="https://apps.apple.com/kw/app/the-boubyan-app/id443799046" target="_blank"
-                            rel="noopener noreferrer" class="project-link"><i class="fab fa-apple"></i> App Store</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="kfh_portfolio_new.png" alt="KFH Bahrain App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">KFH Bahrain</h3>
-                        <p class="project-description">Comprehensive Islamic banking solution for Kuwait Finance House
-                            Bahrain. Built reusable onboarding SDK, account management, secure transactions, and
-                            financial
-                            planning tools following Sharia-compliant banking principles.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Banking SDK</span>
-                            <span class="tech-tag">Security</span>
-                            <span class="tech-tag">REST APIs</span>
-                        </div>
-                        <a href="https://apps.apple.com/bh/app/kfh-bahrain/id771724261" target="_blank"
-                            rel="noopener noreferrer" class="project-link"><i class="fab fa-apple"></i> App Store</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="npfl_portfolio_new.png" alt="NPFL Live App Screenshots" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">NPFL Live</h3>
-                        <p class="project-description">High-performance sports streaming platform for Nigerian
-                            Professional
-                            Football League. Engineered live video delivery using AVFoundation, IPTV protocols, and
-                            adaptive
-                            bitrate streaming to serve thousands of concurrent viewers.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">AVFoundation</span>
-                            <span class="tech-tag">Streaming</span>
-                            <span class="tech-tag">IPTV</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/npfl-live/id6464413890" target="_blank"
-                            rel="noopener noreferrer" class="project-link"><i class="fab fa-apple"></i> App Store</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="officetree_portfolio_new.png" alt="Officetree Phone App Screenshots"
-                            class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Officetree Phone</h3>
-                        <p class="project-description">Professional VoIP business communication platform with
-                            multi-account
-                            management. Integrated PlivoVoiceKit for crystal-clear calling, texting, and call routing to
-                            transform smartphones into complete business phone systems.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">PlivoVoiceKit</span>
-                            <span class="tech-tag">VoIP</span>
-                            <span class="tech-tag">Business Communication</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://apps.apple.com/us/app/officetree-phone/id6444354321" target="_blank"
-                                rel="noopener noreferrer" class="project-link app-store"><i class="fab fa-apple"></i>
-                                App Store</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.officetree.phone&hl=en"
-                                target="_blank" rel="noopener noreferrer" class="project-link play-store"><i
-                                    class="fab fa-google-play"></i> Google Play</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-screenshots">
-                        <img src="kohinoor_portfolio_new.png" alt="Kohinoor Fabric Library App Screenshots"
-                            class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Kohinoor Fabric Library</h3>
-                        <p class="project-description">Full-featured e-commerce platform for fabric browsing and
-                            purchasing.
-                            Built product catalog with advanced search, filters, shopping cart, payment gateway
-                            integration,
-                            and order tracking for seamless online shopping.</p>
-                        <div class="project-technologies">
-                            <span class="tech-tag">Swift</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">E-commerce</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">Payment Integration</span>
-                        </div>
-                        <a href="https://apps.apple.com/pk/app/kohinoor-fabric-library/id1069332525" target="_blank"
-                            rel="noopener noreferrer" class="project-link"><i class="fab fa-apple"></i> App Store</a>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="education">
+            <div class="container">
+                <p class="eyebrow">Education</p>
+                <h2 class="section-title">Where it started</h2>
+                <div class="edu-card">
+                    <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg></div>
+                    <div>
+                        <h3>BSc Computer Engineering</h3>
+                        <p>University of Engineering &amp; Technology, Lahore · 2009 - 2013</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-item">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
+        <!-- Contact -->
+        <section class="section section-contact" id="contact">
+            <div class="container">
+                <p class="eyebrow">Contact</p>
+                <h2 class="section-title">Let's build something</h2>
+                <p class="section-lead">Have a project in mind? Whether it's a new app, a rescue mission on an existing
+                    one, or an architecture review, I'd like to hear about it. I usually reply within a day.</p>
+                <div class="contact-cta">
+                    <a href="mailto:shuja_uet@hotmail.com" class="btn btn-primary">
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                        Email me
+                    </a>
+                    <a href="https://wa.me/923390709080" class="btn btn-ghost" target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                        WhatsApp
+                    </a>
                 </div>
-                <div class="education-content">
-                    <h3 class="education-degree">Bachelor of Science, Computer Engineering</h3>
-                    <h4 class="education-school">University of Engineering & Technology</h4>
-                    <p class="education-period">08/2009 – 10/2013 | Lahore</p>
-                </div>
+                <ul class="contact-list">
+                    <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                        <a href="tel:+923435235173">+92&nbsp;343&nbsp;523&nbsp;5173</a>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                        <span>Lahore, Pakistan</span>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                        <a href="https://linkedin.com/in/shuja-ud-din/" target="_blank" rel="noopener">linkedin.com/in/shuja-ud-din</a>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                        <a href="https://github.com/ishujaudin" target="_blank" rel="noopener">github.com/ishujaudin</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-description">I'm open to remote and international opportunities. Let's connect!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:shuja_uet@hotmail.com">shuja_uet@hotmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+923435235173">+923435235173</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Lahore, Pakistan</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/shuja-ud-din/" target="_blank">linkedin.com/in/shuja-ud-din/</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/ishujaudin" target="_blank">github.com/ishujaudin</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Shuja Ud Din. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Shuja Ud Din. Designed and built by hand.</p>
+            <a href="#top" class="back-top">Back to top</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
+    <!-- Firebase Analytics, loaded after the page is idle so it never
+         competes with rendering -->
+    <script>
+        function loadAnalytics() {
+            import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js").then(({ initializeApp }) =>
+                import("https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js").then(({ getAnalytics, logEvent }) => {
+                    const app = initializeApp({
+                        apiKey: "AIzaSyDBuZhdoossUIVslgtmyyoGyeYTToOreRo",
+                        authDomain: "mobile-developer-sse.firebaseapp.com",
+                        projectId: "mobile-developer-sse",
+                        storageBucket: "mobile-developer-sse.firebasestorage.app",
+                        messagingSenderId: "788741647876",
+                        appId: "1:788741647876:web:b8a64550fd11ce1b518f51",
+                        measurementId: "G-B87LQ87LY5"
+                    });
+                    const analytics = getAnalytics(app);
+
+                    logEvent(analytics, 'page_view', {
+                        page_title: document.title,
+                        page_location: window.location.href
+                    });
+
+                    // Track resume downloads and contact clicks
+                    document.addEventListener('click', (e) => {
+                        const link = e.target.closest('a[href]');
+                        if (!link) return;
+                        const href = link.getAttribute('href');
+                        if (href.endsWith('.pdf')) {
+                            logEvent(analytics, 'resume_download');
+                        } else if (href.startsWith('mailto:')) {
+                            logEvent(analytics, 'contact_email_click');
+                        } else if (href.includes('wa.me')) {
+                            logEvent(analytics, 'contact_whatsapp_click');
+                        }
+                    });
+                })
+            ).catch(() => { });
+        }
+
+        window.addEventListener('load', () => {
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadAnalytics, { timeout: 4000 });
+            } else {
+                setTimeout(loadAnalytics, 2000);
+            }
+        });
+    </script>
 </body>
 
 </html>

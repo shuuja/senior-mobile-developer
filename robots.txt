@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shuuja.github.io/senior-mobile-developer/sitemap.xml

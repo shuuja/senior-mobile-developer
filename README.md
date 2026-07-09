@@ -1,88 +1,39 @@
-# Shuja Ud Din - Portfolio Website
+# Shuja Ud Din, Portfolio
 
-A modern, responsive portfolio website showcasing my experience as a Senior Mobile Developer.
+Personal portfolio of Shuja Ud Din, Senior Software Engineer and Solution Architect.
 
-## 🚀 Deployment to GitHub Pages
+**Live site:** https://shuuja.github.io/senior-mobile-developer/
 
-### Option 1: Using Repository Name `ishujaudin.github.io` (Recommended)
+## Stack
 
-This will make your site available at `https://ishujaudin.github.io`
+Hand-built static site. No frameworks, no build step, no dependencies.
 
-1. **Create a new repository on GitHub:**
-   - Go to [GitHub](https://github.com/new)
-   - Repository name: `ishujaudin.github.io` (must match your username exactly)
-   - Make it public
-   - Click "Create repository"
+- Semantic HTML with JSON-LD structured data
+- Modern CSS: custom properties, grid, `clamp()` fluid type, dark and light themes
+- Vanilla JS for the theme toggle, mobile nav, scroll reveal, and project filters
+- Self-hosted variable fonts (Inter, Space Grotesk)
+- All screenshots served as resized WebP (about 840KB total, down from 19MB)
+- Firebase Analytics for page views and contact click tracking
 
-2. **Push your files to GitHub:**
-   ```bash
-   cd /Users/mac/portfolio
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   git branch -M main
-   git remote add origin https://github.com/ishujaudin/ishujaudin.github.io.git
-   git push -u origin main
-   ```
+## Structure
 
-3. **Enable GitHub Pages:**
-   - Go to your repository settings
-   - Scroll down to "Pages" section
-   - Under "Source", select "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-   - Click "Save"
+```
+index.html      Single-page site: hero, about, services, AI workflow,
+                skills, experience, projects, education, contact
+styles.css      Design tokens + all styling, dark theme is the default
+script.js       Progressive enhancement only; the site works without JS
+assets/         WebP images and woff2 fonts
+```
 
-4. **Wait a few minutes** and your site will be live at `https://ishujaudin.github.io`
+## Deploying
 
-### Option 2: Using a Different Repository Name
+Push to `main`. GitHub Pages serves the repo root directly since there is no
+build step.
 
-If you want to use a different repository name (e.g., `portfolio`), your site will be at `https://ishujaudin.github.io/portfolio`
+## Local preview
 
-1. Create repository with your desired name
-2. Push files as above
-3. Enable GitHub Pages (same steps)
-4. Your site will be at `https://ishujaudin.github.io/<repository-name>`
+Any static server works:
 
-## 📝 Adding Your Profile Picture
-
-1. Add your profile picture to the portfolio directory
-2. Name it `profile.jpg` (or update the filename in `index.html` line 36)
-3. Recommended size: 500x500px or larger (square image works best)
-4. Supported formats: JPG, PNG, WebP
-
-## 🎨 Customization
-
-- **Colors**: Edit the CSS variables in `styles.css` (lines 7-16)
-- **Content**: Update sections in `index.html`
-- **Projects**: Add/remove project cards in the Projects section
-- **Skills**: Modify skill tags in the Skills section
-
-## 📱 Features
-
-- ✅ Fully responsive design
-- ✅ Smooth scrolling navigation
-- ✅ Mobile-friendly hamburger menu
-- ✅ Animated sections on scroll
-- ✅ Modern gradient hero section
-- ✅ Timeline-based experience section
-- ✅ Project showcase with App Store links
-- ✅ Contact information with social links
-
-## 🔧 Technologies Used
-
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- Vanilla JavaScript
-- Font Awesome icons
-- Google Fonts (system fonts)
-
-## 📧 Contact
-
-- Email: shuja_uet@hotmail.com
-- Phone: +923435235173
-- LinkedIn: [linkedin.com/in/shuja-ud-din/](https://linkedin.com/in/shuja-ud-din/)
-- GitHub: [github.com/ishujaudin](https://github.com/ishujaudin)
-
----
-
-**Note**: Make sure to add your profile picture (`profile.jpg`) before deploying, or the placeholder will be shown.
+```
+python3 -m http.server 4173
+```
